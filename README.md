@@ -1,67 +1,50 @@
-# Bài tập C#
+# C# Exercises
 
-Chào mừng! Đây là kho lưu trữ chứa các bài tập C# do thầy giao, phục vụ cho môn học. Mỗi bài tập được tổ chức thành thư mục riêng, kèm mô tả, yêu cầu và hướng dẫn chạy (nếu có).
+Đây là nơi tổng hợp **các bài tập C# **, nhằm lưu trữ quá trình học tập, thực hành và áp dụng các kiến thức lập trình C#.
 
-## Mục lục
+## 📚 Nội dung
 
-- [Giới thiệu](#giới-thiệu)
-- [Nội dung](#nội-dung)
-- [Cấu trúc thư mục](#cấu-trúc-thư-mục)
-- [Yêu cầu môi trường](#yêu-cầu-môi-trường)
-- [Cách chạy bài tập](#cách-chạy-bài-tập)
-- [Góp ý & Liên hệ](#góp-ý--liên-hệ)
+Các bài tập trong repository tập trung vào những kiến thức C# được học trong môn, bao gồm:
 
----
-
-## Giới thiệu
-
-Kho này chứa các bài tập lập trình C# do thầy giao trong kỳ học. Mục tiêu là giúp ôn tập, thực hành kỹ năng lập trình hướng đối tượng, giải thuật cơ bản và làm quen với công cụ .NET.
-
-## Nội dung
-
-Các bài tập bao gồm (khung chung):
-
-- Bài toán xử lý dữ liệu (file, chuỗi, mảng)
-- Lập trình hướng đối tượng (class, kế thừa, interface)
-- Thuật toán và cấu trúc dữ liệu cơ bản (sắp xếp, tìm kiếm, danh sách, ngăn xếp)
-- Ứng dụng console / Windows Forms / các bài tập nhỏ
+* Cú pháp cơ bản trong C#
+* Biến và kiểu dữ liệu
+* Nhập / xuất dữ liệu
+* Toán tử
+* Cấu trúc điều kiện
+* Vòng lặp
+* Mảng và các kiểu dữ liệu liên quan
+* Hàm / phương thức
+* Lập trình hướng đối tượng (OOP)
+* Và các bài tập khác theo nội dung môn học
 
 Mỗi thư mục bài tập thường có:
 - `README.md`: mô tả đề bài và yêu cầu
 - `Source/` hoặc project .NET: mã nguồn
 - `Input/` (nếu có): dữ liệu mẫu để kiểm thử
 
-## Cấu trúc thư mục (ví dụ)
-
-- BaiTap01-Strings/
-  - README.md
-  - BaiTap01.csproj
-  - Program.cs
-- BaiTap02-OOP/
-  - README.md
-  - BaiTap02.sln
-
-(Hãy xem từng thư mục để biết hướng dẫn cụ thể của mỗi bài)
-
-## Yêu cầu môi trường
+  ## Yêu cầu môi trường
 
 - .NET SDK (phiên bản 6.0+ khuyến nghị)
 - Visual Studio hoặc Visual Studio Code (có cài extension C#)
 
-## Cách chạy bài tập
+## 👥 Members
 
-1. Mở thư mục bài tập bằng Visual Studio hoặc Visual Studio Code.
-2. Nếu dùng CLI, chuyển vào thư mục chứa file `.csproj` và chạy:
+| STT | Họ và tên                 |    MSSV    |
+| :-: | ------------------------- | :--------: |
+|  1  | **Lâm Duy Chúc Linh**     | 3124411149 |
+|  2  | **Nguyễn Ngọc Xuân Trúc** | 3124411324 |
+|  3  | **Nguyễn Gia Bảo**        | 3124411022 |
+|  4  | **Bùi Phúc Hưng**         | 3124411115 |
+|  5  | **Vòng Viễn Phi**         | 3124411225 |
 
-```bash
-dotnet restore
-dotnet run
-```
+## 🎯 Mục tiêu
 
-3. Làm theo hướng dẫn từng bài trong README của bài tập (nếu có test case hoặc input mẫu sẽ nêu rõ).
+* Thực hành các kiến thức C# đã được học trên lớp.
+* Rèn luyện tư duy lập trình và khả năng giải quyết bài toán.
+* Lưu trữ và quản lý các bài tập trong quá trình học tập.
+* Làm quen với việc sử dụng **Git/GitHub** để quản lý mã nguồn.
 
-## Góp ý & Liên hệ
+---
 
-Nếu bạn có đề xuất cải thiện cấu trúc repo, muốn sửa lỗi trong mã hoặc thêm tài liệu, vui lòng mở issue hoặc gửi pull request.
-
-Chúc bạn học tốt và hoàn thành các bài tập!
+> **Course:** C# Programming
+> **Repository:** C# Exercises
