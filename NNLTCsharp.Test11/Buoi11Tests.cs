@@ -213,5 +213,111 @@ namespace NNLTBuoi11.Tests
 
             Assert.Contains("Day so co 5 phan tu: -4 -3 -2 3 6", output);
         }
+
+
+    // =========================
+    // BÀI 4: ĐẢO DÃY
+    // =========================
+    public class DaoDayTests
+    {
+        [Fact]
+        public void DaoDay_ViDuDeBai_DungKetQua()
+        {
+            string output = ConsoleTestHelper.RunWithInput(
+                Buoi4.DaoDay,
+                "8\n2 4 3 4 2 8 2 5\n"
+            );
+
+            Assert.Contains("Day so co 8 phan tu: 2 4 3 4 2 8 2 5", output);
+            Assert.Contains("Day so co 8 phan tu: 5 2 8 2 4 3 4 2", output);
+        }
+
+        [Fact]
+        public void DaoDay_MotPhanTu_GiuNguyen()
+        {
+            string output = ConsoleTestHelper.RunWithInput(
+                Buoi4.DaoDay,
+                "1\n7\n"
+            );
+
+            Assert.Contains("Day so co 1 phan tu: 7", output);
+        }
+
+        [Fact]
+        public void DaoDay_SoAmVaSo0_DaoDung()
+        {
+            string output = ConsoleTestHelper.RunWithInput(
+                Buoi4.DaoDay,
+                "5\n-2 0 3 -7 9\n"
+            );
+
+            Assert.Contains("Day so co 5 phan tu: 9 -7 3 0 -2", output);
+        }
+    }
+
+    // =========================
+    // BÀI 5: TRỘN DÃY
+    // =========================
+    public class TronDayTests
+    {
+        [Fact]
+        public void TronDay_ViDuDeBai_DungKetQua()
+        {
+            string output = ConsoleTestHelper.RunWithInput(
+                Buoi4.TronDay,
+                "4\n1 5 8 10\n4\n2 3 7 9\n"
+            );
+
+            Assert.Contains("Day so co 4 phan tu: 1 5 8 10", output);
+            Assert.Contains("Day so co 4 phan tu: 2 3 7 9", output);
+            Assert.Contains("Day so co 8 phan tu: 1 2 3 5 7 8 9 10", output);
+        }
+
+        [Fact]
+        public void TronDay_CoPhanTuTrungNhau_GiuDuTatCa()
+        {
+            string output = ConsoleTestHelper.RunWithInput(
+                Buoi4.TronDay,
+                "4\n1 3 5 7\n4\n1 2 5 8\n"
+            );
+
+            Assert.Contains("Day so co 8 phan tu: 1 1 2 3 5 5 7 8", output);
+        }
+
+        [Fact]
+        public void TronDay_CoSoAm_TronDung()
+        {
+            string output = ConsoleTestHelper.RunWithInput(
+                Buoi4.TronDay,
+                "3\n-5 -1 4\n4\n-3 0 2 10\n"
+            );
+
+            Assert.Contains("Day so co 7 phan tu: -5 -3 -1 0 2 4 10", output);
+        }
+
+        [Fact]
+        public void TronDay_MotDayNamHoanToanTruocDayKia()
+        {
+            string output = ConsoleTestHelper.RunWithInput(
+                Buoi4.TronDay,
+                "3\n1 2 3\n3\n7 8 9\n"
+            );
+
+            Assert.Contains("Day so co 6 phan tu: 1 2 3 7 8 9", output);
+        }
+
+        [Fact]
+        public void TronDay_NKhongHopLe_PhaiNhapLai()
+        {
+            string output = ConsoleTestHelper.RunWithInput(
+                Buoi4.TronDay,
+                "0\n3\n1 3 5\n2\n2 4\n"
+            );
+
+            Assert.Contains("So luong phan tu khong hop le!", output);
+            Assert.Contains("Day so co 5 phan tu: 1 2 3 4 5", output);
+        }
+    }
+
     }
 }
