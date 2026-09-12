@@ -17,10 +17,6 @@ Các bài tập trong repository tập trung vào những kiến thức C# đư�
 * Lập trình hướng đối tượng (OOP)
 * Và các bài tập khác theo nội dung môn học
 
-Mỗi thư mục bài tập thường có:
-- `README.md`: mô tả đề bài và yêu cầu
-- `Source/` hoặc project .NET: mã nguồn
-- `Input/` (nếu có): dữ liệu mẫu để kiểm thử
 
   ## Yêu cầu môi trường
 
