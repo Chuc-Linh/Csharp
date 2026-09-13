@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 /*
-Chương trình: BÀI TẬP CƠ BẢN
-Nội dung:
-    Bài 1. Sắp chẵn lẻ
-    Bài 2. Xóa phần tử chẵn
-    Bài 3. Thêm chẵn lẻ
+Chương trình: BÀI TẬP BUỔI 11
+Nội dung: 4 bài tập cơ bản 
+Tác giả: Lâm Duy Chúc Linh
+Ngày viết: 13/09/2026
 */
+// B. Bài tập cơ bản
+
 
 namespace NNLTBuoi11
 {

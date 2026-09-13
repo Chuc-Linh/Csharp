@@ -1,7 +1,7 @@
 using System;
 /*
 Chương trình: BÀI TẬP BUỔI 1
-Nội dung: 2 bài tập mẫu + 7 bài tập cơ bản + 2 bài tập nâng cao
+Nội dung: 4 bài tập cơ bản 
 Tác giả: Lâm Duy Chúc Linh
 Ngày viết: 08/09/2026
 */
@@ -73,9 +73,25 @@ namespace NNLTBuoi1
         public static void DoiSangGiay()
         {
             /*
-Phát biểu đề bài: DoiSangGiay
+Phát biểu đề bài: DoiSangGiay.
+Nhập vào giờ, phút, giây. Hãy đổi toàn bộ thời gian đã nhập sang giây.
+
 Ý tưởng:
+- Cho người dùng nhập lần lượt số giờ, số phút và số giây.
+- Kiểm tra dữ liệu nhập vào có hợp lệ hay không.
+- Đổi giờ sang giây bằng cách nhân với 3600.
+- Đổi phút sang giây bằng cách nhân với 60.
+- Cộng số giây ban đầu để được tổng số giây.
+
 Mã giả:
+Console.WriteLine("Nhap so gio")
+hour = int.Parse(Console.ReadLine())
+Console.WriteLine("Nhap so phut")
+minute = int.Parse(Console.ReadLine())
+Console.WriteLine("Nhap so giay")
+second = int.Parse(Console.ReadLine())
+tong = hour * 3600 + minute * 60 + second
+Console.WriteLine(tong)
 */
             int hour, minute, second, tong;
 
@@ -130,7 +146,26 @@ Mã giả:
             tong = hour * 3600 + minute * 60 + second;
             Console.WriteLine("Tong so giay cua {0}:{1}:{2} la {3}", hour, minute, second, tong);
         }
+        /*
+Phát biểu đề bài: DoiSangGioPhutGiay.
+Nhập vào một số giây. Hãy đổi số giây đó sang dạng giờ : phút : giây.
 
+Ý tưởng:
+- Cho người dùng nhập tổng số giây.
+- Lấy tổng số giây chia nguyên cho 3600 để tìm số giờ.
+- Lấy phần dư sau khi chia cho 3600 để tìm số giây còn lại.
+- Lấy số giây còn lại chia nguyên cho 60 để tìm số phút.
+- Phần dư khi chia cho 60 chính là số giây.
+
+Mã giả:
+Console.WriteLine("Nhap so giay")
+tonggiay = int.Parse(Console.ReadLine())
+hour = tonggiay / 3600
+tonggiay = tonggiay % 3600
+minute = tonggiay / 60
+second = tonggiay % 60
+Console.WriteLine(hour + ":" + minute + ":" + second)
+*/
         public static void DoiSangGioPhutGiay()
         {
             int hour, minute, second, tonggiay;
@@ -161,7 +196,23 @@ Mã giả:
 
             Console.WriteLine("{0} giay co dang {1}:{2}:{3}", giaybandau, hour, minute, second);
         }
+/*Phát biểu đề bài: TinhMu.
+Nhập vào số dương a và số nguyên không âm n. Hãy tính a mũ n.
 
+Ý tưởng:
+- Cho người dùng nhập cơ số a và số mũ n.
+- Kiểm tra a phải là số dương và n phải là số nguyên không âm.
+- Sử dụng Math.Pow(a, n) để tính a mũ n.
+- In kết quả ra màn hình.
+
+Mã giả:
+Console.WriteLine("Nhap a")
+a = double.Parse(Console.ReadLine())
+Console.WriteLine("Nhap n")
+n = int.Parse(Console.ReadLine())
+ketqua = Math.Pow(a, n)
+Console.WriteLine(ketqua)
+*/
         public static void TinhMu()
         {
             double a;
