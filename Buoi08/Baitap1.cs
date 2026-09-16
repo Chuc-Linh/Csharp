@@ -59,13 +59,32 @@ namespace Buoi08
         {
             int n, k;
             double kq;
-            Console.Write("Moi ban nhap so nguyen n: ");
-            n= int.Parse(Console.ReadLine());
-            Console.Write("Moi ban nhap so nguyen k: ");
+            Console.Write("Moi ban nhap k: ");
             k= int.Parse(Console.ReadLine());
-
+            Console.Write("Moi ban nhap n: ");
+            n= int.Parse(Console.ReadLine());
             kq= TinhCkn(n,k);
-            Console.Write(" Gia tri cua Ckn la:{0} ", kq);
+            Console.Write(" C({0},{1}) = {2} ",k,n,kq);
         }
     }
 }
+
+
+
+//Test cases
+//1:
+// Moi ban nhap k: 2
+// Moi ban nhap n: 5
+// C(2,5) = 10
+//2:
+// Moi ban nhap k: 3
+// Moi ban nhap n: 6
+// C(3,6) = 20
+//3:
+// Moi ban nhap k: 5
+// Moi ban nhap n: 10
+// C(5,10) = 252
+//4:
+// Moi ban nhap k: 0
+// Moi ban nhap n: 5
+// C(0,5) = 1
