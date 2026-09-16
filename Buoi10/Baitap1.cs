@@ -26,8 +26,17 @@ namespace Buoi10
         public static void Nhapdayso(ref int[] day)
         {
             int i,n;
-            Console.Write("Moi ban nhap so luong phan tu: ");
-            n=int.Parse(Console.ReadLine());
+            do
+        {
+            Console.Write("Moi ban nhap so luong phan tu (1 - 500): ");
+            n = int.Parse(Console.ReadLine());
+
+            if (n < 1 || n > 500)
+            {
+                Console.WriteLine("So luong phan tu phai tu 1 den 500!");
+            }
+
+            } while (n < 1 || n > 500);
             day=new int[n];
             for(i=0; i < n; i++)
             {
@@ -48,7 +57,7 @@ namespace Buoi10
                 }
             }
 
-            Console.Write("Tong cac phan tu trong day so: {0}", tong);
+            Console.Write("Tong cac phan tu cuc tri co trong day so: {0}", tong);
         }
         public static void Giaibai1(String[] args)
         {
@@ -58,3 +67,18 @@ namespace Buoi10
         }
     }
 }
+
+//Test cases
+//1:
+//   Nhập mảng: -1 3 -12 5 4 6 8 -4
+//   Output: Tong cac phan tu cuc tri co trong day so: 8
+//2:
+//   Nhập mảng: 1 2 3 4 5
+//   Output: Tong cac phan tu cuc tri co trong day so: 0
+//3:
+//   Nhập mảng: 5 4 3 2 1
+//   Output: Tong cac phan tu cuc tri co trong day so: 0    
+//4:
+//   Nhập mảng: 1 3 0 4 5 -9 7
+//   Output: Tong cac phan tu cuc tri co trong day so: -1
+
