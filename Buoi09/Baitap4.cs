@@ -33,19 +33,40 @@ namespace Buoi09
 {
     public class Baitap4
     {
-        public static void Nhapdayso(ref double[] day)
+        public static void Nhapdayso(ref int[] day)
         {
             int i,n;
-            Console.Write("Moi ban nhap so luong phan tu: ");
-            n=int.Parse(Console.ReadLine());
-            day=new double[n];
+            do
+        {
+            Console.Write("Moi ban nhap so luong phan tu (1 - 500): ");
+            n = int.Parse(Console.ReadLine());
+
+            if (n < 1 || n > 500)
+            {
+                Console.WriteLine("So luong phan tu phai tu 1 den 500!");
+            }
+
+            } while (n < 1 || n > 500);
+            day=new int[n];
             for(i=0; i < n; i++)
             {
                 Console.Write("Nhap phan tu thu {0}: ",i);
-                day[i]= double.Parse(Console.ReadLine());
+                day[i]= int.Parse(Console.ReadLine());
 
             }
         }
+
+        public static void Xuatdayso(int[] day)
+    {
+        Console.WriteLine("Day so co {0} phan tu:", day.Length);
+
+        for (int i = 0; i < day.Length; i++)
+        {
+            Console.Write(day[i] + " ");
+        }
+
+        Console.WriteLine();
+    }
 
         public static void Timdaucuoi(double[] day)
         {
@@ -85,7 +106,29 @@ namespace Buoi09
         {
             double[] a=null;
             Nhapdayso(ref a);
+            Xuatdayso(a);
             Timdaucuoi(a);
         }
     }
 }
+
+
+//Test cases
+//1:
+//   Nhập mảng: 1 2 3 4 5 6
+//   Nhập số cần tìm: 4
+//   Output: Giá trị x đầu tiên ở vị trí 3 có giá trị 4.
+//           Giá trị x cuối cùng ở vị trí 3 có giá trị 4.
+//2:
+//   Nhập mảng: 7 8 9 10
+//   Nhập số cần tìm: 5
+//   Output: Dãy số không có giá trị x cần tìm.
+//3:
+//   Nhập mảng: 1 3 5 3 7
+//   Nhập số cần tìm: 3
+//   Output: Giá trị x đầu tiên ở vị trí 1 có giá trị 3.
+//           Giá trị x cuối cùng ở vị trí 3 có giá trị 3.
+//4:
+//   Nhập mảng: 2 4 6 8
+//   Nhập số cần tìm: 6
+//   Output: Day số có một giá trị x duy nhất ở vị trí 2 có giá trị 6.

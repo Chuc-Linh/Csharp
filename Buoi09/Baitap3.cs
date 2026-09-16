@@ -29,8 +29,17 @@ namespace Buoi09
         public static void Nhapdayso(ref int[] day)
         {
             int i,n;
-            Console.Write("Moi ban nhap so luong phan tu: ");
-            n=int.Parse(Console.ReadLine());
+            do
+        {
+            Console.Write("Moi ban nhap so luong phan tu (1 - 500): ");
+            n = int.Parse(Console.ReadLine());
+
+            if (n < 1 || n > 500)
+            {
+                Console.WriteLine("So luong phan tu phai tu 1 den 500!");
+            }
+
+            } while (n < 1 || n > 500);
             day=new int[n];
             for(i=0; i < n; i++)
             {
@@ -71,3 +80,17 @@ namespace Buoi09
         }
     }
 }
+
+//Test cases
+//1:
+//   Nhập mảng: -1 -2 0 1 2
+//   Output: Day so co 2 so am, 1 so khong va 2 so duong.
+//2:
+//   Nhập mảng: 0 0 0
+//   Output: Day so co 0 so am, 3 so khong va 0 so duong.
+//3:
+//   Nhập mảng: -5 -10 -15
+//   Output: Day so co 3 so am, 0 so khong va 0 so duong.
+//4:
+//   Nhập mảng: 5 10 15
+//   Output: Day so co 0 so am, 0 so khong va 3 so duong.
