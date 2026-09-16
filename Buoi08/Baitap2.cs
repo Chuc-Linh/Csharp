@@ -89,3 +89,15 @@ namespace Buoi08
 }
 
 //Test cases
+//1:
+// Moi nhap so nguyen n: 6
+// Cac so hoan hao trong doan [1,6] la: 6
+//2:
+// Moi nhap so nguyen n: 30
+// Cac so hoan hao trong doan [1,30] la: 28 6
+//3:
+// Moi nhap so nguyen n: 100
+// Cac so hoan hao trong doan [1,100] la: 28 6
+//4:
+// Moi nhap so nguyen n: 500
+// Cac so hoan hao trong doan [1,500] la: 496 28 6

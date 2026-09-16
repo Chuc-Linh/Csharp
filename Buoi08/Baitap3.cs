@@ -86,3 +86,21 @@ namespace Buoi08
         }
     } 
 }
+
+//Test cases
+//1:
+// Moi nhap tu so n: 4
+// Moi nhap mau so m: 8
+// Gia tri cua phan so 4/8 la: 1/2
+//2:
+// Moi nhap tu so n: 5
+// Moi nhap mau so m: 0
+// Phan so khong hop le!
+//3:
+// Moi nhap tu so n: 12
+// Moi nhap mau so m: 16
+// Gia tri cua phan so 12/16 la: 3/4
+//4:
+// Moi nhap tu so n: 15
+// Moi nhap mau so m: 25
+// Gia tri cua phan so 15/25 la: 3/5

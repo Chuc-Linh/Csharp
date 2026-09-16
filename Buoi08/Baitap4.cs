@@ -75,3 +75,33 @@ namespace Buoi08
         }
     }
 }
+
+//Test cases
+//1:
+// Moi nhap so nguyen duong n: 123321
+// Chu so 1 xuat hien 2 lan.
+// Chu so 2 xuat hien 2 lan.
+// Chu so 3 xuat hien 2 lan.
+//2:
+// Moi nhap so nguyen duong n: 100200300
+// Chu so 0 xuat hien 6 lan.
+// Chu so 1 xuat hien 1 lan.
+// Chu so 2 xuat hien 1 lan.
+// Chu so 3 xuat hien 1 lan.
+//3:
+// Moi nhap so nguyen duong n: 112233
+// Chu so 1 xuat hien 2 lan.
+// Chu so 2 xuat hien 2 lan.
+// Chu so 3 xuat hien 2 lan.
+//4:
+// Moi nhap so nguyen duong n: 9876543210
+// Chu so 0 xuat hien 1 lan.
+// Chu so 1 xuat hien 1 lan.
+// Chu so 2 xuat hien 1 lan.
+// Chu so 3 xuat hien 1 lan.
+// Chu so 4 xuat hien 1 lan.
+// Chu so 5 xuat hien 1 lan.
+// Chu so 6 xuat hien 1 lan.
+// Chu so 7 xuat hien 1 lan.
+// Chu so 8 xuat hien 1 lan.
+// Chu so 9 xuat hien 1 lan.
