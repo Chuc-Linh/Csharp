@@ -112,3 +112,61 @@ namespace BUOI6
      }
     }
 }
+//              DANH SACH TESTCASE - BUOI 6 CAU 1
+//              In chu I va U
+// TEST 1: Chieu cao 5 (vi du de bai)
+// ------------------------------------------------------------
+// Input:
+//   5
+// Output mong doi:
+//   Moi ban nhap chieu cao h: Chu I va U ung voi h = 5 la:
+//   * * * * *     *       *
+//       *         *       *
+//       *         *       *
+//       *         *       *
+//   * * * * *     * * * * *
+// ------------------------------------------------------------
+// TEST 2: Chieu cao 3
+// ------------------------------------------------------------
+// Input:
+//   3
+// Output mong doi:
+//   Moi ban nhap chieu cao h: Chu I va U ung voi h = 3 la:
+//   * * *     *   *
+//     *       *   *
+//   * * *     * * *
+// ------------------------------------------------------------
+// TEST 3: Chieu cao 1
+// ------------------------------------------------------------
+// Input:
+//   1
+// Output mong doi:
+//   Moi ban nhap chieu cao h: Chu I va U ung voi h = 1 la:
+//   *     *
+//
+// ------------------------------------------------------------
+// TEST 4: Chieu cao 7
+// ------------------------------------------------------------
+// Input:
+//   7
+// Output mong doi:
+//   Moi ban nhap chieu cao h: Chu I va U ung voi h = 7 la:
+//   * * * * * * *     *           *
+//       *             *           *
+//       *             *           *
+//       *             *           *
+//       *             *           *
+//       *             *           *
+//   * * * * * * *     * * * * * * *
+//
+// ------------------------------------------------------------
+// TEST 5: Nhap sai (so am)
+// ------------------------------------------------------------
+// Input:
+//   -3
+//   5
+//
+// Output mong doi:
+//   Moi ban nhap chieu cao h: Nhap sai! Vui long nhap so nguyen duong: (roi tiep tuc voi h=5)
+//
+// ============================================================
