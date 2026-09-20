@@ -182,4 +182,126 @@ namespace Cau4
         }
     }
 }
-
+// ============================================================
+//              Tim ngay truoc
+// ============================================================
+//
+// ------------------------------------------------------------
+// TEST 1: Vi du de bai (1/2/2015)
+// ------------------------------------------------------------
+// Input:
+//   1
+//   2
+//   2015
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay truoc ngay 1/2/2015 la ngay 31/1/2015.
+//
+// ------------------------------------------------------------
+// TEST 2: Ngay binh thuong (15/6/2024)
+// ------------------------------------------------------------
+// Input:
+//   15
+//   6
+//   2024
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay truoc ngay 15/6/2024 la ngay 14/6/2024.
+//
+// ------------------------------------------------------------
+// TEST 3: Ngay dau nam (1/1/2024)
+// ------------------------------------------------------------
+// Input:
+//   1
+//   1
+//   2024
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay truoc ngay 1/1/2024 la ngay 31/12/2023.
+//
+// ------------------------------------------------------------
+// TEST 4: Nam nhuan (1/3/2024 - thang 2 co 29 ngay)
+// ------------------------------------------------------------
+// Input:
+//   1
+//   3
+//   2024
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay truoc ngay 1/3/2024 la ngay 29/2/2024.
+//
+// ------------------------------------------------------------
+// TEST 5: Khong nhuan (1/3/2015 - thang 2 co 28 ngay)
+// ------------------------------------------------------------
+// Input:
+//   1
+//   3
+//   2015
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay truoc ngay 1/3/2015 la ngay 28/2/2015.
+//
+// ------------------------------------------------------------
+// TEST 6: Ngay cuoi nam (31/12/2023)
+// ------------------------------------------------------------
+// Input:
+//   31
+//   12
+//   2023
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay truoc ngay 31/12/2023 la ngay 30/12/2023.
+//
+// ------------------------------------------------------------
+// TEST 7: Ngay 29/2 nam nhuan
+// ------------------------------------------------------------
+// Input:
+//   29
+//   2
+//   2024
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay truoc ngay 29/2/2024 la ngay 28/2/2024.
+//
+// ------------------------------------------------------------
+// TEST 8: Ngay khong hop le (29/2 nam khong nhuan)
+// ------------------------------------------------------------
+// Input:
+//   29
+//   2
+//   2023
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay 29/2/2023 khong hop le!
+//
+// ------------------------------------------------------------
+// TEST 9: Ngay khong hop le (31/4 - thang 4 chi co 30 ngay)
+// ------------------------------------------------------------
+// Input:
+//   31
+//   4
+//   2024
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay 31/4/2024 khong hop le!
+//
+// ------------------------------------------------------------
+// TEST 10: Thang 1 ngay 1 nam 1 (truong hop bien)
+// ------------------------------------------------------------
+// Input:
+//   1
+//   1
+//   1
+//
+// Output mong doi:
+//   Moi ban nhap ngay: Moi ban nhap thang: Moi ban nhap nam: 
+//   Ngay truoc ngay 1/1/1 la ngay 31/12/0.
