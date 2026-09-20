@@ -102,3 +102,89 @@ namespace BUOI7
         }
     }
 }
+// ============================================================
+//              Tinh so Pi (cong thuc Leibniz)
+// ============================================================
+//
+// LUU Y: Ket qua Pi co the sai lech vai chu so cuoi
+//        do sai so dau phay dong cua may tinh.
+//        Day la hien tuong BINH THUONG.
+//
+// ------------------------------------------------------------
+// TEST 1: Vi du de bai (epsilon = 0.001)
+// ------------------------------------------------------------
+// Input:
+//   0.001
+//
+// Output mong doi:
+//   Moi ban nhap do sai so epsilon: 
+//   So pi tinh den do chinh xac 0.001 la 3.14109265362104.
+//   Do sai so so thuc te la 0.000500000031244611.
+//
+// ------------------------------------------------------------
+// TEST 2: epsilon = 0.0001 (chinh xac hon)
+// ------------------------------------------------------------
+// Input:
+//   0.0001
+//
+// Output mong doi:
+//   Moi ban nhap do sai so epsilon: 
+//   So pi tinh den do chinh xac 0.0001 la 3.14149265359003.
+//   Do sai so so thuc te la 9.99999997406814E-05.
+//
+// ------------------------------------------------------------
+// TEST 3: epsilon = 1e-6 (rat chinh xac)
+// ------------------------------------------------------------
+// Input:
+//   1e-6
+//
+// Output mong doi:
+//   Moi ban nhap do sai so epsilon: 
+//   So pi tinh den do chinh xac 1E-06 la 3.14159165358977.
+//   Do sai so so thuc te la 1.00000001511301E-06.
+//
+// ------------------------------------------------------------
+// TEST 4: epsilon = 1 (dung ngay)
+// ------------------------------------------------------------
+// Input:
+//   1
+//
+// Output mong doi:
+//   Moi ban nhap do sai so epsilon: 
+//   So pi tinh den do chinh xac 1 la 4.
+//   Do sai so so thuc te la 0.858407346410207.
+//
+// ------------------------------------------------------------
+// TEST 5: epsilon = 0.1
+// ------------------------------------------------------------
+// Input:
+//   0.1
+//
+// Output mong doi:
+//   Moi ban nhap do sai so epsilon: 
+//   So pi tinh den do chinh xac 0.1 la 3.33968253968254.
+//   Do sai so so thuc te la 0.198089886092746.
+//
+// ------------------------------------------------------------
+// TEST 6: Nhap sai (epsilon am)
+// ------------------------------------------------------------
+// Input:
+//   -0.5
+//   0.001
+//
+// Output mong doi:
+//   Moi ban nhap do sai so epsilon: Nhap sai! Vui long nhap so thuc duong: 
+//   So pi tinh den do chinh xac 0.001 la 3.14109265362104.
+//   Do sai so so thuc te la 0.000500000031244611.
+//
+// ------------------------------------------------------------
+// TEST 7: Nhap sai (chuoi ky tu)
+// ------------------------------------------------------------
+// Input:
+//   abc
+//   0.001
+//
+// Output mong doi:
+//   Moi ban nhap do sai so epsilon: Nhap sai! Vui long nhap so thuc duong: 
+//   So pi tinh den do chinh xac 0.001 la 3.14109265362104.
+//   Do sai so so thuc te la 0.000500000031244611.
