@@ -121,3 +121,113 @@ namespace BUOI6
         }
     }
 }
+//              Xu ly chu so (1)
+// ------------------------------------------------------------
+// TEST 1: Vi du de bai
+// ------------------------------------------------------------
+// Input:
+//   182345
+//   2
+//
+// Output mong doi:
+//   Moi ban nhap so nguyen n: Moi ban nhap vi tri k: 
+//   Chu so o vi tri 2 (tinh tu trai) cua 182345 la 8.
+//   Tong cac chu so le cua 182345 la 9.
+//   182345 co chu so le nho nhat la 1 va lon nhat la 5.
+//
+// ------------------------------------------------------------
+// TEST 2: So khong co chu so le
+// ------------------------------------------------------------
+// Input:
+//   2468
+//   3
+//
+// Output mong doi:
+//   Moi ban nhap so nguyen n: Moi ban nhap vi tri k: 
+//   Chu so o vi tri 3 (tinh tu trai) cua 2468 la 6.
+//   Tong cac chu so le cua 2468 la 0.
+//   2468 khong co chu so le.
+//
+// ------------------------------------------------------------
+// TEST 3: So co 1 chu so
+// ------------------------------------------------------------
+// Input:
+//   7
+//   1
+//
+// Output mong doi:
+//   Moi ban nhap so nguyen n: Moi ban nhap vi tri k: 
+//   Chu so o vi tri 1 (tinh tu trai) cua 7 la 7.
+//   Tong cac chu so le cua 7 la 7.
+//   7 co chu so le nho nhat la 7 va lon nhat la 7.
+//
+// ------------------------------------------------------------
+// TEST 4: Toan so le
+// ------------------------------------------------------------
+// Input:
+//   13579
+//   5
+//
+// Output mong doi:
+//   Moi ban nhap so nguyen n: Moi ban nhap vi tri k: 
+//   Chu so o vi tri 5 (tinh tu trai) cua 13579 la 9.
+//   Tong cac chu so le cua 13579 la 25.
+//   13579 co chu so le nho nhat la 1 va lon nhat la 9.
+//
+// ------------------------------------------------------------
+// TEST 5: So lon (kiem tra long)
+// ------------------------------------------------------------
+// Input:
+//   154491287489
+//   5
+//
+// Output mong doi:
+//   Moi ban nhap so nguyen n: Moi ban nhap vi tri k: 
+//   Chu so o vi tri 5 (tinh tu trai) cua 154491287489 la 9.
+//   Tong cac chu so le cua 154491287489 la 25.
+//   154491287489 co chu so le nho nhat la 1 va lon nhat la 9.
+//
+// ------------------------------------------------------------
+// TEST 6: So 100
+// ------------------------------------------------------------
+// Input:
+//   100
+//   1
+//
+// Output mong doi:
+//   Moi ban nhap so nguyen n: Moi ban nhap vi tri k: 
+//   Chu so o vi tri 1 (tinh tu trai) cua 100 la 1.
+//   Tong cac chu so le cua 100 la 1.
+//   100 co chu so le nho nhat la 1 va lon nhat la 1.
+//
+// ------------------------------------------------------------
+// TEST 7: Nhap sai k (lon hon so chu so)
+// ------------------------------------------------------------
+// Input:
+//   123
+//   5
+//   3
+//
+// Output mong doi:
+//   Moi ban nhap so nguyen n: Moi ban nhap vi tri k: 
+//   Nhap sai! Vui long nhap k tu 1 den 3: 
+//   Chu so o vi tri 3 (tinh tu trai) cua 123 la 3.
+//   Tong cac chu so le cua 123 la 4.
+//   123 co chu so le nho nhat la 1 va lon nhat la 3.
+//
+// ------------------------------------------------------------
+// TEST 8: Nhap sai n (so am)
+// ------------------------------------------------------------
+// Input:
+//   -5
+//   6
+//   1
+//
+// Output mong doi:
+//   Moi ban nhap so nguyen n: Nhap sai! Vui long nhap so nguyen duong: 
+//   Moi ban nhap vi tri k: 
+//   Chu so o vi tri 1 (tinh tu trai) cua 6 la 6.
+//   Tong cac chu so le cua 6 la 6.
+//   6 co chu so le nho nhat la 6 va lon nhat la 6.
+//
+// ============================================================
