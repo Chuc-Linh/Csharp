@@ -1,0 +1,16 @@
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/bin/Debug/net11.0/Cau3
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/bin/Debug/net11.0/Cau3.deps.json
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/bin/Debug/net11.0/Cau3.runtimeconfig.json
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/bin/Debug/net11.0/Cau3.runtimeconfig.dev.json
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/bin/Debug/net11.0/Cau3.dll
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/bin/Debug/net11.0/Cau3.pdb
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/Cau3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/Cau3.AssemblyInfoInputs.cache
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/Cau3.AssemblyInfo.cs
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/Cau3.csproj.CoreCompileInputs.cache
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/Cau3.dll
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/refint/Cau3.dll
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/Cau3.pdb
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/Cau3.genruntimeconfig.cache
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/ref/Cau3.dll
+/Users/nguyenngocxuantruc/Documents/C#_THUCHANHCACBUOI/BUOI6/Cau3/obj/Debug/net11.0/Cau3.csproj.Up2Date
