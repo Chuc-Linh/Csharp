@@ -102,3 +102,78 @@ namespace BUOI6
         }
     }
 }
+//              Liet ke so hoan hao
+// TEST 1: Vi du de bai (n = 10)
+// ------------------------------------------------------------
+// Input:
+//   10
+//
+// Output mong doi:
+//   Moi ban nhap so n: Cac so hoan hao trong doan [1, 10]: 6 
+//
+// ------------------------------------------------------------
+// TEST 2: n = 30 (co 2 so hoan hao)
+// ------------------------------------------------------------
+// Input:
+//   30
+//
+// Output mong doi:
+//   Moi ban nhap so n: Cac so hoan hao trong doan [1, 30]: 28 6 
+//
+// ------------------------------------------------------------
+// TEST 3: n = 500 (co 3 so hoan hao)
+// ------------------------------------------------------------
+// Input:
+//   500
+//
+// Output mong doi:
+//   Moi ban nhap so n: Cac so hoan hao trong doan [1, 500]: 496 28 6 
+//
+// ------------------------------------------------------------
+// TEST 4: n = 5 (khong co so hoan hao)
+// ------------------------------------------------------------
+// Input:
+//   5
+//
+// Output mong doi:
+//   Moi ban nhap so n: Cac so hoan hao trong doan [1, 5]: khong co
+//
+// ------------------------------------------------------------
+// TEST 5: n = 6 (co 1 so hoan hao)
+// ------------------------------------------------------------
+// Input:
+//   6
+//
+// Output mong doi:
+//   Moi ban nhap so n: Cac so hoan hao trong doan [1, 6]: 6 
+//
+// ------------------------------------------------------------
+// TEST 6: n = 10000 (co 4 so hoan hao)
+// ------------------------------------------------------------
+// Input:
+//   10000
+//
+// Output mong doi:
+//   Moi ban nhap so n: Cac so hoan hao trong doan [1, 10000]: 8128 496 28 6 
+//
+// ------------------------------------------------------------
+// TEST 7: n = 1 (khong co so hoan hao)
+// ------------------------------------------------------------
+// Input:
+//   1
+//
+// Output mong doi:
+//   Moi ban nhap so n: Cac so hoan hao trong doan [1, 1]: khong co
+//
+// ------------------------------------------------------------
+// TEST 8: Nhap sai (so am)
+// ------------------------------------------------------------
+// Input:
+//   -5
+//   30
+//
+// Output mong doi:
+//   Moi ban nhap so n: Nhap sai! Vui long nhap so nguyen duong: 
+//   Cac so hoan hao trong doan [1, 30]: 28 6 
+//
+// 
