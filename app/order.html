@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đặt hàng - Roselle Flowers</title>
+
+<link rel="stylesheet" href="../style.css">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+.order-container{
+max-width:1000px;
+margin:40px auto;
+font-family:'Quicksand',sans-serif;
+}
+
+.back-btn{
+display:inline-block;
+margin-bottom:20px;
+text-decoration:none;
+color:#444;
+font-weight:600;
+}
+
+.order-box{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.order-box label{
+display:flex;
+align-items:center;
+gap:10px;
+cursor:pointer;
+margin-bottom:10px;
+}
+
+.order-box input[type="radio"]{
+width:16px;
+height:16px;
+accent-color:#ff6b81;
+}
+
+.order-item{
+display:flex;
+align-items:center;
+gap:20px;
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+.order-item img{
+width:80px;
+height:80px;
+border-radius:10px;
+object-fit:cover;
+}
+
+.order-info{flex:1;}
+
+.order-price{
+font-weight:600;
+color:#e53935;
+}
+
+.total-box{
+display:flex;
+justify-content:space-between;
+font-size:20px;
+font-weight:700;
+margin-top:10px;
+}
+
+.pay-method{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:10px;
+}
+
+.bank-info{
+margin-top:10px;
+padding:10px;
+background:#f5f5f5;
+border-radius:6px;
+display:none;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+margin-top:6px;
+}
+
+.order-btn{
+margin-top:20px;
+width:100%;
+padding:12px;
+border:none;
+background:#ff6b81;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="order-container">
+
+<a href="cart.html" class="back-btn">← Quay lại giỏ hàng</a>
+
+<div class="order-box">
+
+<h3>Sản phẩm</h3>
+
+<div id="order-list"></div>
+
+<div class="total-box">
+<span>Tổng tiền</span>
+<span id="order-total"></span>
+</div>
+
+</div>
+
+
+<div class="order-box">
+
+<h3>Thông tin nhận hàng</h3>
+
+<label>
+<input type="radio" name="infoType" value="account" checked onchange="toggleInfo()">
+Dùng thông tin tài khoản
+</label>
+
+<label>
+<input type="radio" name="infoType" value="other" onchange="toggleInfo()">
+Nhập thông tin khác
+</label>
+
+<div id="account-info"></div>
+
+<div id="other-info" style="display:none">
+
+<label>Họ tên</label>
+<input id="name">
+
+<label>SĐT</label>
+<input id="phone">
+
+<label>Địa chỉ</label>
+<textarea id="address"></textarea>
+
+</div>
+
+</div>
+
+
+<div class="order-box">
+
+<h3>Phương thức thanh toán</h3>
+
+<div class="pay-method">
+
+<label>
+<input type="radio" name="pay" value="COD" checked onchange="toggleBank()">
+Thanh toán khi nhận hàng
+</label>
+
+<label>
+<input type="radio" name="pay" value="BANK" onchange="toggleBank()">
+Chuyển khoản ngân hàng
+</label>
+
+</div>
+
+<div class="bank-info" id="bank-info">
+
+<b>Thông tin chuyển khoản</b>
+
+<p>Ngân hàng: Vietcombank</p>
+<p>Số tài khoản: 123456789</p>
+<p>Chủ tài khoản: ROSSELLE FLOWERS</p>
+<p>Nội dung: Thanh toán đơn hàng Roselle</p>
+
+</div>
+
+</div>
+
+<button class="order-btn" onclick="placeOrder()">
+Đặt hàng
+</button>
+
+</div>
+
+<script src="../js/order.js"></script>
+
+</body>
+</html>

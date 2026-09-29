@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chi tiết sản phẩm - Roselle Flowers</title>
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family: Quicksand;
+background:#fafafa;
+margin:0;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+.breadcrumb{
+font-size:14px;
+margin-bottom:25px;
+color:#777;
+}
+
+.breadcrumb a{
+text-decoration:none;
+color:#555;
+}
+
+.breadcrumb a:hover{
+color:#ff4d6d;
+}
+
+.product-detail{
+display:flex;
+gap:40px;
+align-items:flex-start;
+}
+
+.product-img{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.product-img img{
+width:100%;
+max-width:450px;
+height:450px;
+object-fit:contain;
+background:#fff;
+border-radius:12px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+padding:15px;
+}
+
+.product-info{
+flex:1;
+}
+
+.product-title{
+font-size:32px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.product-price{
+font-size:28px;
+color:#e91e63;
+font-weight:600;
+margin:15px 0;
+}
+
+.product-meta{
+color:#777;
+margin-bottom:20px;
+}
+
+.product-desc{
+line-height:1.7;
+margin-bottom:30px;
+}
+
+.buy-box{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.qty{
+width:60px;
+padding:8px;
+font-size:16px;
+}
+
+.btn-buy{
+background:#ff4d6d;
+color:white;
+border:none;
+padding:12px 25px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-buy:hover{
+background:#e63950;
+}
+
+.back{
+margin-top:30px;
+display:inline-block;
+text-decoration:none;
+color:#444;
+}
+
+@media(max-width:900px){
+
+.product-detail{
+flex-direction:column;
+}
+
+}
+
+.add-cart-btn{
+background:#ee4d2d;
+color:white;
+border:none;
+padding:12px 28px;
+font-size:16px;
+font-weight:600;
+border-radius:6px;
+cursor:pointer;
+transition:0.25s;
+margin-top:15px;
+}
+
+.add-cart-btn:hover{
+background:#d84326;
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.add-cart-btn:active{
+transform:scale(0.97);
+}
+
+.quantity-control{
+display:flex;
+align-items:center;
+gap:10px;
+margin-right:10px;
+}
+
+.quantity-control button{
+width:32px;
+height:32px;
+border:1px solid #ddd;
+background:white;
+cursor:pointer;
+font-size:18px;
+border-radius:4px;
+}
+
+.quantity-control span{
+min-width:30px;
+text-align:center;
+font-weight:600;
+}
+</style>
+
+<header>
+  <div class="header-left"><h1>roselle</h1></div>
+
+  <nav class="header-center">
+    <ul>
+      <li><a href="../index.html">Trang chủ</a></li>
+      <li><a href="../menu/hoa-cam-tu.html">Hoa Cẩm Tú</a></li>
+      <li><a href="../menu/hoa-tulip.html">Hoa Tulip</a></li>
+      <li><a href="../menu/hoa-hong.html">Hoa hồng</a></li>
+      <li><a href="../menu/hoa-huongduong.html">Hoa hướng dương</a></li>
+      <li><a href="../menu/hoa-baby.html">Hoa Baby</a></li>
+
+      <li class="has-dropdown">
+        <a href="#" class="drop-toggle">Hoa khác ▾</a>
+        <ul class="dropdown">
+          <li><a href="../menu/hoa-dong-tien.html">Hoa Đồng Tiền</a></li>
+          <li><a href="../menu/hoa-ly.html">Hoa ly</a></li>
+          <li><a href="../menu/lan-ho-diep.html">Lan Hồ Điệp</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+<div class="header-right" id="user-area">
+<a href="../baomat/register.html"><button class="btn">Đăng ký</button></a>
+<a href="../baomat/login.html"><button class="btn">Đăng nhập</button></a>
+</div>
+</header>
+
+<body>
+
+<div class="container">
+
+<div class="breadcrumb">
+
+<a href="../index.html">Trang chủ</a> >
+
+<a id="bread-category-link"></a> >
+
+<span id="bread-name"></span>
+
+</div>
+
+<div class="product-detail">
+
+<div class="product-img">
+<img id="product-img">
+</div>
+
+<div class="product-info">
+
+<div class="product-title" id="product-name"></div>
+
+<div class="product-meta">Hoa tươi • Gói cao cấp • Giao nhanh</div>
+
+<div class="product-price" id="product-price"></div>
+
+<div class="product-desc" id="product-desc"></div>
+
+<div class="buy-box">
+
+<label>Số lượng</label>
+
+<div class="quantity-control">
+
+<button onclick="decreaseQty()">-</button>
+
+<span id="qty">1</span>
+
+<button onclick="increaseQty()">+</button>
+
+</div>
+
+<button class="add-cart-btn" onclick="addCurrentProduct()">
+Thêm vào giỏ hàng
+</button>
+
+</div>
+
+<a class="back" href="../menu/hoa-tulip.html">← Quay lại danh sách</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/product_detail.js"></script>
+</body>
+</html>

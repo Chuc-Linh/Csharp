@@ -1,0 +1,649 @@
+/* Minimal styles kept for current header + hero + search-card layout */
+
+:root {
+  --header-height: 70px;
+  --accent: #1e73e8;
+}
+
+html,body{height:100%;}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f9;
+  color: #333;
+  padding-top: var(--header-height);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Header (fixed) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.95);
+  height: var(--header-height);
+  padding: 0 30px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-left h1 { font-family: 'Quicksand', sans-serif; font-weight: 600; margin: 0; color: #333; }
+
+/* center nav */
+.header-center ul {
+  list-style: none;
+  display: flex;
+  gap: 22px; /* hơi nhỏ hơn trước */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.header-center a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 15px; /* nhỏ hơn 1 miếng */
+  font-family: 'Quicksand', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  text-transform: uppercase; /* in hoa */
+  letter-spacing: 0.6px; /* hơi rộng cho đẹp mắt */
+  position: relative;
+  padding: 6px 8px;
+  transition: color 180ms ease, transform 180ms ease;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+
+.header-center a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 50%;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: transform 180ms ease;
+  z-index: 2;
+  opacity: 0.98;
+}
+
+/* hover giữ nguyên hiệu ứng */
+.header-center a:hover { color: var(--accent); }
+.header-center a:hover::after { transform: translateX(-50%) scaleX(1); }
+
+/* active state (if you add class="active" in HTML) */
+.header-center a.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+.header-center a.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.header-right .btn {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  box-shadow: 0 6px 18px rgba(30,115,232,0.12);
+  display: inline-block;
+  line-height: 1;
+}
+
+/* hover / focus */
+.header-right .btn:hover,
+.header-right .btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(30,115,232,0.18);
+  background: #155ec6; /* nhẹ tối hơn khi hover */
+  outline: none;
+}
+
+/* accessible focus ring */
+.header-right .btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(30,115,232,0.12), 0 14px 34px rgba(30,115,232,0.18);
+}
+
+/* small screens spacing */
+@media (max-width: 520px) {
+  .header-right .btn { padding: 7px 12px; margin-left: 8px; font-size: 14px; }
+}
+
+/* Dropdown "Hoa khác" */
+/* container relative so dropdown can be absolutely positioned */
+.header-center .has-dropdown {
+  position: relative;
+}
+
+/* Dropdown: vertical stacked list (desktop) */
+.header-center .has-dropdown .dropdown {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px);
+  transform: translateX(-50%) translateY(-6px);
+
+  display: block;
+  white-space: normal;
+
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(10,15,25,0.12);
+  list-style: none;
+  padding: 6px 8px;
+  margin: 0;
+  min-width: 180px;
+  max-width: 320px;
+
+  /* hidden state */
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), opacity 180ms ease, max-height 260ms ease, visibility 200ms;
+  z-index: 1200;
+}
+
+.header-center .has-dropdown .dropdown li {
+  margin: 6px 0;
+}
+.header-center .has-dropdown .dropdown a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 160ms ease, color 160ms ease, transform 120ms ease;
+}
+.header-center .has-dropdown .dropdown a:hover {
+  background: rgba(30,115,232,0.06);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* show dropdown on hover */
+.header-center .has-dropdown:hover .dropdown,
+.header-center .has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  max-height: 400px;
+  overflow: visible;
+}
+
+/* mobile: keep stacked behavior (unchanged) */
+@media (max-width: 720px) {
+  .header-center .has-dropdown .dropdown {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+    margin-top: 6px;
+    width: 100%;
+    max-width: none;
+    border-radius: 8px;
+    padding: 8px 0;
+    box-shadow: none;
+    background: transparent;
+    display: block;
+  }
+  .header-center .has-dropdown .dropdown li { display: block; margin: 4px 0; }
+  .header-center .has-dropdown .dropdown a {
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.95);
+    margin: 4px 12px;
+    border-radius: 6px;
+  }
+}
+
+/* Hero background (blurred image via pseudo-element, content stays sharp) */
+.hero {
+  position: relative;
+  width: 100%;
+  background: transparent; /* image moved to pseudo-element so we can blur it */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+  /* size controls (unchanged behavior) */
+  height: auto;
+  min-height: 30vh;
+  max-height: 420px;
+  padding: 32px 0;
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  background-clip: padding-box;
+}
+
+/* blurred background layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/hinhnen.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* blur + slight scale so edges don't show when blurred */
+  filter: blur(7px);
+  transform: scale(1.06);
+  will-change: filter, transform;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* subtle light overlay to mute image (keeps text readable) */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* keep hero content above the layers */
+.hero .hero-content { position: relative; z-index: 2; }
+
+/* Landscape and wide screens: still limited height (not full-screen) */
+@media (orientation: landscape) and (min-width: 900px) {
+  .hero {
+    min-height: 34vh;
+    max-height: 420px;
+  }
+}
+
+/* Portrait / narrow: make hero a bit shorter */
+@media (orientation: portrait), (max-width: 900px) {
+  .hero {
+    min-height: 28vh;
+    max-height: 320px;
+    padding: 22px 0;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+}
+
+/* Content inside hero (optional centered text) */
+.hero .hero-content {
+  text-align: center;
+  padding: 20px;
+  max-width: 1100px;
+  width: 100%;
+}
+.hero h2 {
+  margin: 0 0 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 4vw, 40px);
+  letter-spacing: 0.6px;
+  text-transform: capitalize;
+}
+.hero p {
+  margin: 0;
+  font-size: clamp(14px, 2vw, 18px);
+  opacity: 0.95;
+}
+
+/* ensure header sits above hero visually */
+header { z-index: 1100; }
+
+/* Intro section: ảnh trái, chữ phải */
+.intro {
+  width: 100%;
+  max-width: none;
+  margin: 22px 0 0;          /* thêm khoảng cách trên để tách khỏi hero */
+  background: transparent;
+  border-radius: 0;
+  padding: 28px 0 40px;
+  box-shadow: none;
+}
+
+/* Inner container giới hạn nội dung và căn giữa */
+.intro .container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* giữ layout ảnh trái, chữ phải nhưng nội dung không còn khung ngoài */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0 20px;
+}
+
+/* image card */
+.intro-image img {
+  width: 130%;
+  height: 130%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transform: translateX(-23%); /* đẩy ảnh sang trái một chút */
+  box-shadow: 0 10px 30px rgba(10,15,25,0.06);
+}
+
+/* text area */
+.intro-text h3 {
+  margin: 0 0 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 29px;
+}
+.intro-text p {
+  margin: 0 0 12px;
+  color: #444;
+  line-height: 1.6;
+}
+.intro-text .muted {
+  color: #667085;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* reuse primary button style */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(30,115,232,0.12);
+}
+
+/* responsive: stack on small screens, image on top */
+@media (max-width: 900px) {
+  .intro {
+    padding: 18px 0 24px;
+  }
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 12px;
+  }
+  .intro-image img { max-height: 200px; border-radius: 8px; }
+}
+
+/* Hot flowers grid (3 x 2) */
+.hot-flowers {
+  padding: 28px 0 40px;
+  background: transparent;
+}
+.hot-flowers .section-title {
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  padding: 0 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 29px;
+  text-align: center;
+  color: #123;
+}
+
+/* grid: 3 columns desktop, 2 tablet, 1 mobile */
+.hot-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+/* each card frame */
+.flower-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(10,15,25,0.06);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* placeholder thumb — replace background-image or inject <img> later */
+.flower-thumb {
+  width: 100%;
+  padding-top: 72%; /* aspect ratio ~4:3 */
+  background-color: #f1f3f5;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* if you prefer to set images via data-img attribute with JS: */
+.flower-thumb[data-img] {
+  background-image: none; /* JS can copy data-img to background-image */
+}
+
+/* title */
+.flower-title {
+  margin: 6px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .hot-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 520px) {
+  .hot-grid { grid-template-columns: 1fr; }
+  .flower-card { padding: 10px; }
+}
+
+/* Footer styles (kích thước lưới thay để chỉ chứa thông tin shop) */
+.site-footer {
+  background: #0f1724;
+  color: #e6eef9;
+  padding: 28px 20px 18px;
+  margin-top: 28px;
+  font-size: 14px;
+}
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* chỉ 2 cột: nội dung shop + contact */
+  gap: 18px;
+  align-items: start;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* ẩn menu footer nếu còn style cũ sử dụng */
+.footer-nav { display: none; }
+
+.site-footer .brand h4 {
+  margin: 0 0 6px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.site-footer .brand p {
+  margin: 6px 0;
+  color: #cfe1ff;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.site-footer .address {
+  margin-top: 8px;
+  color: #a9c6ef;
+  font-size: 13px;
+}
+
+.site-footer .contact p {
+  margin: 0 0 8px;
+  color: #cfe1ff;
+}
+
+.site-footer .contact a {
+  color: #cfe1ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer .social a {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 6px 8px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  max-width: 1180px;
+  margin: 16px auto 0;
+  padding: 12px 20px 6px;
+  color: #9fb7e6;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+  }
+  .footer-nav { display: none; }
+  .site-footer .contact { order: 3; }
+}
+
+/* user login header */
+
+.user-name{
+font-size:18px;
+font-weight:700;
+color:#333;
+font-family:'Quicksand',sans-serif;
+margin-right:10px;
+}
+
+.header-right{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* dropdown user */
+
+/* dropdown user */
+
+.user-dropdown{
+position:relative;
+display:inline-block;
+}
+
+.user-name{
+font-size:18px;
+font-weight:700;
+color:#222;
+cursor:pointer;
+}
+
+/* menu */
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:100%;
+right:0;
+background:white;
+box-shadow:0 6px 16px rgba(0,0,0,0.15);
+border-radius:8px;
+min-width:180px;
+padding:6px 0;
+z-index:999;
+}
+
+/* item */
+
+.dropdown-menu a{
+display:block;
+padding:10px 16px;
+text-decoration:none;
+color:#333;
+font-size:14px;
+transition:background 0.2s;
+}
+
+.dropdown-menu a:hover{
+background:#f5f5f5;
+}
+
+/* giữ menu khi hover */
+
+.user-dropdown:hover .dropdown-menu{
+display:block;
+}
+
+.cart-btn{
+font-size:22px;
+text-decoration:none;
+margin-right:15px;
+}
+
+.cart-btn:hover{
+transform:scale(1.1);
+}
+
+/* icon giỏ hàng */
+.cart-icon{
+position:relative;
+font-size:22px;
+text-decoration:none;
+color:black;
+margin-right:15px;
+}
+
+/* số lượng sản phẩm */
+#cart-count{
+position:absolute;
+top:-6px;
+right:-10px;
+background:black;
+color:white;
+font-size:12px;
+padding:2px 6px;
+border-radius:50%;
+}
+

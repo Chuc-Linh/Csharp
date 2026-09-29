@@ -1,0 +1,19 @@
+@{
+    var userName = Context.Session.GetString("UserName");
+    var role = Context.Session.GetString("UserRole");
+}
+
+@if (string.IsNullOrEmpty(userName))
+{
+    <a asp-controller="Account" asp-action="Register"><button class="btn">Đăng ký</button></a>
+    <a asp-controller="Account" asp-action="Login"><button class="btn">Đăng nhập</button></a>
+}
+else
+{
+    <span class="welcome">Xin chào, <strong>@userName</strong></span>
+    @if (role == "Admin")
+    {
+        <a href="/admin" target="_blank"><button class="btn">Quản trị</button></a>
+    }
+    <a asp-controller="Account" asp-action="Logout"><button class="btn">Đăng xuất</button></a>
+}
