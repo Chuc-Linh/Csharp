@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đăng ký - Roselle Flowers</title>
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/register.css">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<a href="../index.html" class="back-btn">← Quay lại</a>
+
+<div class="register-box">
+
+<h2>Tạo tài khoản</h2>
+
+<div class="form-grid">
+
+<input type="text" id="username" placeholder="Tên người dùng" oninput="checkRegister()">
+<input type="text" id="fullname" placeholder="Họ và tên" oninput="checkRegister()">
+<input type="text" id="phone" placeholder="Số điện thoại" oninput="checkRegister()">
+<input type="text" id="address" placeholder="Địa chỉ" oninput="checkRegister()">
+<input type="email" id="email" placeholder="Email" oninput="checkRegister()">
+<input type="password" id="password" placeholder="Mật khẩu" oninput="checkRegister()">
+<input type="password" id="confirm" placeholder="Xác nhận mật khẩu" oninput="checkRegister()">
+
+</div>
+
+<button id="registerBtn" onclick="register()" disabled>Đăng ký</button>
+
+<p class="login-link">
+Đã có tài khoản? <a href="login.html">Đăng nhập</a>
+</p>
+
+</div>
+
+<script src="../js/register.js"></script>
+
+</body>
+</html>

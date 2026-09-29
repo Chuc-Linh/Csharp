@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đăng nhập - Roselle Flowers</title>
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/login.css">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<a href="../index.html" class="back-btn">← Quay lại</a>
+
+<div class="login-box">
+
+<h2>Đăng nhập</h2>
+
+<div class="form-group">
+<label>Tên người dùng</label>
+<input type="text" id="username" placeholder="Tên người dùng" oninput="checkLogin()">
+</div>
+
+<div class="form-group">
+<label>Mật khẩu</label>
+<input type="password" id="password" placeholder="Mật khẩu" oninput="checkLogin()">
+</div>
+
+
+<button id="loginBtn" onclick="login()" disabled>Đăng nhập</button>
+
+<p class="register-link">
+Chưa có tài khoản? <a href="register.html">Đăng ký</a>
+</p>
+
+</div>
+
+<script src="../js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Thông tin cá nhân - Roselle Flowers</title>
+
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+.profile-container{
+max-width:700px;
+margin:40px auto;
+font-family:'Quicksand',sans-serif;
+}
+
+.profile-box{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.profile-box h2{
+margin-bottom:20px;
+}
+
+.profile-group{
+margin-bottom:15px;
+}
+
+.profile-group label{
+display:block;
+font-weight:600;
+margin-bottom:5px;
+}
+
+.profile-group input,
+.profile-group textarea{
+width:100%;
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.save-btn{
+margin-top:10px;
+padding:12px 20px;
+background:#ff6b81;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.save-btn:hover{
+background:#ff4d6d;
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="header-left">
+      <h1>roselle</h1>
+    </div>
+
+    <nav class="header-center">
+      <ul>
+        <li><a href="index.html" class="active">Trang chủ</a></li>
+        <li><a href="../menu/hoa-cam-tu.html">Hoa Cẩm Tú</a></li>
+        <li><a href="../menu/hoa-tulip.html">Hoa Tulip</a></li>
+        <li><a href="../menu/hoa-hong.html">Hoa hồng</a></li>
+        <li><a href="../menu/hoa-huongduong.html">Hoa hướng dương</a></li>
+        <li><a href="../menu/hoa-baby.html">Hoa Baby</a></li>
+
+        <li class="has-dropdown">
+          <a href="#" class="drop-toggle">Hoa khác ▾</a>
+          <ul class="dropdown">
+            <li><a href="../menu/hoa-dong-tien.html">Hoa Đồng Tiền</a></li>
+            <li><a href="../menu/hoa-ly.html">Hoa ly</a></li>
+            <li><a href="../menu/lan-ho-diep.html">Lan Hồ Điệp</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+<div class="header-right" id="user-area">
+  <a href="baomat/register.html"><button class="btn">Đăng ký</button></a>
+  <a href="baomat/login.html"><button class="btn">Đăng nhập</button></a>
+</div>
+  </header>
+
+
+<main class="profile-container">
+
+<div class="profile-box">
+
+<h2>Thông tin cá nhân</h2>
+
+<div class="profile-group">
+<label>Email</label>
+<input id="email">
+</div>
+
+<div class="profile-group">
+<label>Họ tên</label>
+<input id="name">
+</div>
+
+<div class="profile-group">
+<label>Số điện thoại</label>
+<input id="phone">
+</div>
+
+<div class="profile-group">
+<label>Địa chỉ</label>
+<textarea id="address"></textarea>
+</div>
+
+<button class="save-btn" onclick="saveProfile()">
+Lưu thay đổi
+</button>
+
+</div>
+
+</main>
+
+
+<footer class="site-footer">
+
+<div class="container footer-grid">
+
+<div class="brand">
+<h4>roselle</h4>
+<p>Roselle Flowers — hoa tươi cho mọi khoảnh khắc.</p>
+<p class="address">123 Đường Hoa, Quận A, TP. HCM</p>
+</div>
+
+<div class="contact">
+<p><strong>Hotline:</strong> 0123 456 789</p>
+<p><strong>Email:</strong> info@roselle.example</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<small>© <span id="site-year"></span> Roselle Flowers</small>
+</div>
+
+</footer>
+
+<script src="../js/auth.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+</html>
