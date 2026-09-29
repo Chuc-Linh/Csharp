@@ -487,3 +487,10 @@ appsettings.*.json
 
 # Backup HTML
 _backup_html/
+# File rác macOS copy
+* 2.*
+* 3.*
+* 4.*
+
+# File .sln trùng lặp trong project
+DoAn/Roselle.Web/Roselle.Web.sln
